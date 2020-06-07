@@ -11,7 +11,7 @@ export const CreateAdminPage = () =>{
             idNumber: input.idNumber,
             password: input.password
         }
-        await fetch("http://localhost:3000/Admin",{
+        await fetch("https://online-grade-viewer-api.herokuapp.com/Admin",{
             method: "POST",
             mode: "cors",
             headers:{
