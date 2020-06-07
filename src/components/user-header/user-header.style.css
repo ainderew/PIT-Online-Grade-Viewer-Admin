@@ -1,0 +1,37 @@
+.user-header-container{
+  width: 100%;
+  height: 11rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #FBFDFF;
+}
+.user-header-container::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  border-bottom: 1px solid rgb(224, 224, 224);
+  width: 65%;
+}
+.right-user-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5rem;
+}
+
+.left-user-header{
+  display: flex;
+  align-items: center;
+  padding-left: 7rem;
+}
+@media only screen and (max-width: 1600px){
+  .user-header-container{
+    height: 9rem;
+  }
+  .left-user-header{
+    padding-left: 5rem;
+  }
+}

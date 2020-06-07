@@ -1,0 +1,11 @@
+.time-row{
+    grid-template-columns: 8rem;
+}
+
+.calendar-row-time-text{
+    font-size: 1rem;
+}
+
+.calendar-time-cel{
+    background: #1dd1a1;
+}

@@ -1,0 +1,9 @@
+.loggedin-page{
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+}
+
+.loggedin-page-container{
+    display: grid;
+    grid-template-rows: fit-content(1px) ;
+}

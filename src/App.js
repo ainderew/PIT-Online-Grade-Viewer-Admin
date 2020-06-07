@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch,Route} from "react-router-dom"
 import './App.css';
+import {LoginPage} from "./components/Login-Page/login-page.component"
+import {LoggedInPage} from "./components/LoggedIn-Page/LoggedIn-Page.component"
+import {CalendarModule} from "./components/Calendar/calendar-module/calendar-module.component"
 
-function App() {
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={LoginPage} />
+          <Route path="/Admin" component={LoggedInPage} />
+          <Route path="/calendar" component={CalendarModule} />
+        </Switch>
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+

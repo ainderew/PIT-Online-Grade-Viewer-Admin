@@ -1,0 +1,31 @@
+.calendar-row-container{
+    display: grid;
+    grid-template-rows: repeat(29, 2rem);
+    grid-template-columns: 15rem;    
+}
+
+.calendar-row-header{
+    border: 2px solid #939393;
+    background: #1dd1a1;
+    grid-row: span 1/auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar-row-header-text{
+    font-size: 1rem;
+}
+.calendar-row-day-cel{
+    border: 1px solid #939393;
+    grid-row: span 1/auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar-row-day-cel-colored{
+  
+    background: yellow;
+    border-left: 1px solid #939393;
+    border-right: 1px solid #939393;
+    grid-row: span 1/auto;
+}

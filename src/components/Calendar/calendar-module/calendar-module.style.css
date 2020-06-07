@@ -1,0 +1,66 @@
+.calendar-module-off{
+    display: none;
+}
+.calendar-module-on{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80rem;
+    height: 80%;
+    position: absolute;
+}
+
+
+.calendar-module-container{
+    display: flex;
+    width: 80rem;
+    height: 80%;
+    overflow: scroll;
+    margin-bottom: 2rem;
+}
+.calendar-module-button-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    /* height: 10rem; */
+
+}
+.calendarSubmitBtn{
+    width: 15rem;
+    height: 3rem;
+    background: #A9B972;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow:  inset 5px 5px 10px #909d61, 
+                 inset -5px -5px 10px #c2d583;
+    /* box-shadow:  inset 5px 5px 10px #d9d9d9, 
+                 inset -5px -5px 10px #ffffff; */
+    transition: 300ms ease;
+}
+.calendarSubmitBtn:hover{
+    box-shadow:   5px 5px 10px #d9d9d9, 
+                  -5px -5px 10px #ffffff;
+    /* transform: scale(1.1) */
+}
+.calendarClearBtn{
+    width: 10rem;
+    height: 3rem;
+    background: #FBFDFF;
+    border: none;
+    border-radius: 2rem;
+    /* color: white; */
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: inset 5px 5px 5px #e9ebed, 
+    inset -5px -5px 5px #ffffff;
+    outline: none;
+    transition: 1000ms;
+}
+.calendarClearBtn:hover{
+    box-shadow:  5px 5px 5px #e9ebed, 
+     -5px -5px 5px #ffffff;
+}
+

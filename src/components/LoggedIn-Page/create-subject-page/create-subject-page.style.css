@@ -1,0 +1,172 @@
+.blurred{
+    filter: opacity(0)
+}
+.create-subject-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FBFDFF;
+}
+.create-subject-form{
+    width: 85%;
+    height: 90%;
+    background: #FBFDFF;
+    box-shadow:  5px 5px 17px #e2e4e6, 
+                 -5px -5px 17px #ffffff;
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 8rem);
+}
+.create-subject-input{
+    border-radius: .5rem;
+    background: #FBFDFF;
+    box-shadow: inset 5px 5px 16px #e2e4e6, 
+            inset -5px -5px 16px #ffffff;
+    height: 2rem;
+    /* border: 1px grey solid; */
+    border: none;   
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
+.create-subject-row{
+    display: flex;
+}
+
+.create-subject-row-div1{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 8rem;
+    /* border: 1px solid red; */
+}
+.create-subject-row-div2{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 8rem;
+    /* border: 1px solid green; */
+}
+.create-subject-row-div3{
+    grid-column: 3/5;
+    grid-row: 2/5;
+    /* border: 1px solid yellow; */
+}
+.set-schedule-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.set-schedule-btn-img{
+    width: 10rem;
+    transition: 300ms ease;
+}
+.set-schedule-btn{
+    background: none;
+    border: none;
+    outline: none;
+}
+.set-schedule-btn:hover .set-schedule-btn-img{
+    width: 12rem;
+}
+
+.create-subject-row-div4{
+    grid-column: 1/3;
+    grid-row: 5/6;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.create-subject-row-div5{
+    grid-column: 1/3;
+    grid-row: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid purple; */
+}
+.create-subject-row-div6{
+    grid-column: 3/5;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid purple; */
+}
+
+.create-subject-input-div{
+    display: flex;
+    flex-direction: column;
+}
+   
+
+
+
+.create-subject-name{
+    margin-right: 2rem;
+    width: 30rem;
+}
+.create-subject-code{
+    margin-right: 2rem;
+}
+.create-subject-section{
+    width: 5rem;
+    margin-right: 2rem;
+}
+.create-subject-unit{
+    width: 4rem;
+    padding: 0 1rem;
+}
+.create-subject-teacher{
+    width: 30rem;
+}
+/* .create-subject-year{
+    width: 8rem;
+    
+}
+.create-subject-sem{
+    margin-right: 2.5rem;
+} */
+
+.create-subject-room,
+.create-subject-capacity,
+.create-subject-sem,
+.create-subject-year{
+    width: 10rem;
+    margin-right: 2.5rem;
+}
+ 
+.create-subject-button{
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    margin-right: 3rem;
+}
+
+.create-subject-create{
+    background: #A9B972;
+    color: white;
+box-shadow:  5px 5px 11px #a1a2a3, 
+             -5px -5px 11px #ffffff;
+             width: 15rem;
+             
+    
+}
+
+.create-subject-reset{
+    background: #FBFDFF;
+    box-shadow: inset 5px 5px 5px #e9ebed, 
+            inset -5px -5px 5px #ffffff;
+}

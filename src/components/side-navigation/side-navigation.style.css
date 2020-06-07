@@ -1,0 +1,66 @@
+.side-nav{
+    background: #fff;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr .2fr 3fr .2fr 1fr;
+    color: #717171;
+    box-shadow:  5px 5px 10px #e7e9eb, 
+             -5px -5px 10px #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.sec{
+    padding: 0 2rem;
+}
+.sec-1,
+.sec-2,
+.sec-4{
+    display: flex;
+    align-items: center;
+    
+}
+
+.sec-2,
+.sec-4{
+    background: #A9B972;
+    height: 2rem;
+    color: #fff;
+}
+.sec-2,
+.sec-4 p{
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.sidenav-pit-logo{
+    width: 4rem;
+    margin-right: 2rem;
+}
+.sidenav-pit-logo-text{
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 1600px){
+    
+    .sec-2,
+    .sec-4 p{
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    .sec-2,
+    .sec-4{
+        height: 1.6rem;
+    }
+    .sidenav-pit-logo-text{
+        font-size: .8rem;
+    }
+    .sidenav-pit-logo{
+        width: 3rem;
+        margin-right: 1rem;
+    }
+    .sec{
+        padding: 0 1.5rem;
+    }
+    
+}

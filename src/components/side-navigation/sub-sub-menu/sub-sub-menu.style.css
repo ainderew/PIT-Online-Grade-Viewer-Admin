@@ -1,0 +1,12 @@
+.subSubMenu{
+    width: 100%;
+    /* height: 200%; */
+    position: absolute;
+    right: .2%;
+    top: 0;
+    transform: translateX(100%);
+    background: #fff;
+    box-shadow:  5px 5px 10px #ababab, 
+             -5px -5px 10px #ffffff;
+
+}
