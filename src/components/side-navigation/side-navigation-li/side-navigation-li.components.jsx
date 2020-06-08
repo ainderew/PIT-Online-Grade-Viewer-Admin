@@ -5,11 +5,10 @@ import {SubMenu} from "../side-navigation-subMenu/side-navigation-subMenu.compon
 
 
 export const SideNavLi = (props) =>{
-    console.log(props.indexed)
     const subMenuLogic = props.subMenuLogic;
     const subMenuLi = props.subMenuLi
     return(
-        <li className="nav-li"><a href={props.linkAddress}> {props.linkName}</a> {subMenuLogic?<SubMenu className="subMenu" subMenuLi={subMenuLi} />: null}</li>
+        <li className={props.classNameAssigned} ><a href={props.linkAddress}> <img className="side-nav-li-img" src={props.linkIcon} alt=""/> {props.linkName}</a> {subMenuLogic?<SubMenu className="subMenu" subMenuLi={subMenuLi} />: null}</li>
        
     )
 }

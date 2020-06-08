@@ -1,11 +1,24 @@
 .nav-li{
     text-decoration: none;
-    
-    
+    position: relative;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    height: 4rem;
 }
+
+
 .subMenu{
     display: none;
 }
 .nav-li:hover .subMenu{
     display: block;
+}
+.nav-li-colored:hover .subMenu{
+    display: block;
+}
+
+.side-nav-li-img{
+    width: 1rem;
+    margin-right: .5rem;
 }

@@ -1,50 +1,35 @@
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "./Loggedin-Page.style.css"
+import HomeSvg from "../../assets/home.svg"
+import StudentSvg from "../../assets/student.svg"
+import TeacherSvg from "../../assets/teacher.svg"
+import SubjectSvg from "../../assets/subjects.svg"
 import {SideNavigation} from "../side-navigation/side-navigation.component"
 import {UserHeader} from "../user-header/user-header.component"
 import {AdminHomePage} from "./home-admin-page/home-admin-page.component"
 import {CreateAdminPage} from "./create-admin-page/create-admin-page.component"
 import {CreateSubjectPage} from "./create-subject-page/create-subject-page.component"
+import {EnrollNewStudentPage} from "./enroll-newStudent-page/enroll-newStudent.component"
 
 export const LoggedInPage = () =>{
     const [navigationData] = useState([
         {
+            linkIcon: HomeSvg,
             linkName: "Home",
             linkAddress: "/loggedin",
             linkSubMenu: false
             
         },
-
-
+        
         {
-            linkName: "Subjects",
+            linkIcon: StudentSvg,
+            linkName: "Student",
             linkAddress: "",
             linkSubMenu: true,
             subMenuLi: [
                 {
-                    linkAddress: "/admin/createSubject",
-                    linkName: "Create Subject",
-                    linkSubMenu: false
-                    
-                },
-                {
-                    linkAddress: "/admin",
-                    linkName: "View Subjects",
-                    linkSubMenu: false
-                    
-                }
-            ]
-        },
-
-
-        {
-            linkName: "For Student",
-            linkAddress: "",
-            linkSubMenu: true,
-            subMenuLi: [
-                {
-                    linkAddress: "/admin",
+                    // linkAddress: "",
                     linkName: "Enroll Student",
                     linkSubMenu: true,
                     subMenuLi: [
@@ -55,12 +40,18 @@ export const LoggedInPage = () =>{
                             
                         },
                         {
-                            linkAddress: "/admin",
+                            linkAddress: "/admin/enrollNew",
                             linkName: "New Student",
                             linkSubMenu: false
                             
                         }
                     ]
+                    
+                },
+                {
+                    linkAddress: "/admin",
+                    linkName: "Add Student To Database",
+                    linkSubMenu: false
                     
                 },
                 {
@@ -71,8 +62,10 @@ export const LoggedInPage = () =>{
                 }
             ]
         },
+
         {
-            linkName: "For Teachers",
+            linkIcon: TeacherSvg,
+            linkName: "Teachers",
             linkAddress: "",
             linkSubMenu: true,
             subMenuLi: [
@@ -96,6 +89,29 @@ export const LoggedInPage = () =>{
                 }
             ]
         },
+
+
+        {
+            linkIcon: SubjectSvg,
+            linkName: "Subjects",
+            linkAddress: "",
+            linkSubMenu: true,
+            subMenuLi: [
+                {
+                    linkAddress: "/admin/createSubject",
+                    linkName: "Create Subject",
+                    linkSubMenu: false
+                    
+                },
+                {
+                    linkAddress: "/admin",
+                    linkName: "View Subjects",
+                    linkSubMenu: false
+                    
+                }
+            ]
+        },
+        
         {
             linkName: "Create Admin Account",
             linkAddress: "/admin/CreateAdmin",
@@ -114,6 +130,7 @@ export const LoggedInPage = () =>{
                         <Route path="/admin" exact component ={AdminHomePage} />
                         <Route path="/admin/createAdmin" component={CreateAdminPage} />
                         <Route path="/admin/createSubject" component={CreateSubjectPage} />
+                        <Route path="/admin/enrollNew" component={EnrollNewStudentPage} />
                     </Switch>
                 </div>
             </div>

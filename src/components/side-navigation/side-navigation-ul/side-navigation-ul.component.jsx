@@ -8,7 +8,12 @@ export const SideNavUl = (props) =>{
     <ul className="nav-ul">
         
         {props.navigationData.map( (el,index) => {
-                return <SideNavLi key={index} indexed={index} linkAddress={el.linkAddress} linkName={el.linkName} subMenuLogic={el.linkSubMenu} subMenuLi={el.subMenuLi} submenuClassName="nav-li nav-li-active" />
+            // if (index%2 === 0){
+            //     return <SideNavLi key={index} classNameAssigned={"nav-li"} indexed={index} linkAddress={el.linkAddress} linkName={el.linkName} subMenuLogic={el.linkSubMenu} subMenuLi={el.subMenuLi} submenuClassName="nav-li nav-li-active" />
+            // }else{
+            //     return <SideNavLi key={index} classNameAssigned={"nav-li-colored"} indexed={index} linkAddress={el.linkAddress} linkName={el.linkName} subMenuLogic={el.linkSubMenu} subMenuLi={el.subMenuLi} submenuClassName="nav-li nav-li-active" />
+            // }
+            return <SideNavLi key={index} classNameAssigned={"nav-li"} indexed={index} linkIcon={el.linkIcon} linkAddress={el.linkAddress} linkName={el.linkName} subMenuLogic={el.linkSubMenu} subMenuLi={el.subMenuLi} submenuClassName="nav-li nav-li-active" />
           
         } )}
         

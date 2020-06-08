@@ -23,6 +23,7 @@ export const LoginPage = () =>{
         setPassword(event.target.value)
     }
     const [loginErrorIndicator,setIndicator] =useState("")
+    
     const [button,setButton] = useState(<button className="admin-login-btn" type="submit">Log-in</button>)
     const changeToLoader = () =>{
         setButton(<div className="lds-dual-ring"></div>)
