@@ -1,0 +1,66 @@
+.enroll-returning-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.enroll-returning-findStudent-form{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    background: #ffffff;
+    box-shadow:  6px 6px 12px #bfbfbf, 
+             -6px -6px 12px #ffffff;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.returning-input-field{
+    margin-top: 1rem;
+    padding: 0 3rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: inset 5px 5px 9px #bfbfbf, 
+    inset -5px -5px 9px #ffffff;
+}
+.returning-find-form-img{
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+}
+.enroll-returning-form-input-div{
+    width: 100%;
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.returning-find-input{
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 5rem;
+}
+
+.returning-find-button{
+    margin-bottom: -5rem;
+    width: 10rem;
+    height: 3rem;
+    background: #2DDE98;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}

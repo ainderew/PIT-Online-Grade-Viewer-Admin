@@ -1,9 +1,12 @@
 import React,{useState} from "react";
 import "./calendar-module.style.css";
+import {useDispatch} from "react-redux"
+import {subjectSchedule} from "../../../actions"
 import {CalendarRow} from "../calendar-row/calendar-row.component";
 import {CalendarTimeRow} from "../calendar-time-rows/calendar-time-rows.component"
 
 export const CalendarModule = (props) =>{
+    const dispatch = useDispatch()
     const [childState, setChildState] = useState([{}])
     const [clearState, setClearState] = useState(true)
 
@@ -25,7 +28,7 @@ export const CalendarModule = (props) =>{
             state: childState
         }
 
-        await fetch("http://localhost:3000/Admin/CreateSubject",{
+        await fetch("https://online-grade-viewer-api.herokuapp.com/Admin/CreateSubject",{
             method: "POST",
             mode: "cors",
             headers: {
@@ -34,7 +37,8 @@ export const CalendarModule = (props) =>{
             body:JSON.stringify(request)
         })
         .then( response => response.json())
-        .then( data => console.log(data))
+        .then( data => dispatch(subjectSchedule(data)))
+
         props.DisplayToggler();
         
     }

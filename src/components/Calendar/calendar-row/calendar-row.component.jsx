@@ -27,7 +27,7 @@ export const CalendarRow = (props) =>{
   
     const [state,setState] = useState([props.Day,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
     const [color,setColor] = useState( makeArray )
-    const [clear] = useState(props.Clear)
+ 
 
     useEffect( () =>{
         setState([props.Day,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])    

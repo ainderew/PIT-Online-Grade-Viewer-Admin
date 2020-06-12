@@ -9,8 +9,10 @@ import {SideNavigation} from "../side-navigation/side-navigation.component"
 import {UserHeader} from "../user-header/user-header.component"
 import {AdminHomePage} from "./home-admin-page/home-admin-page.component"
 import {CreateAdminPage} from "./create-admin-page/create-admin-page.component"
+import {CreateTeacherPage} from "./create-teacher-page/create-teacher.component"
 import {CreateSubjectPage} from "./create-subject-page/create-subject-page.component"
 import {EnrollNewStudentPage} from "./enroll-newStudent-page/enroll-newStudent.component"
+import {EnrollReturningStudentPage} from "./enroll-returningStudent-page/enroll-returningStudent.component"
 
 export const LoggedInPage = () =>{
     const [navigationData] = useState([
@@ -34,7 +36,7 @@ export const LoggedInPage = () =>{
                     linkSubMenu: true,
                     subMenuLi: [
                         {
-                            linkAddress: "/admin",
+                            linkAddress: "/admin/enrollReturning",
                             linkName: "Returning Student",
                             linkSubMenu: false
                             
@@ -82,7 +84,7 @@ export const LoggedInPage = () =>{
                     
                 },
                 {
-                    linkAddress: "/admin",
+                    linkAddress: "/admin/createTeacher",
                     linkName: "Create Teacher Account",
                     linkSubMenu: false
                     
@@ -129,8 +131,10 @@ export const LoggedInPage = () =>{
                     <Switch>
                         <Route path="/admin" exact component ={AdminHomePage} />
                         <Route path="/admin/createAdmin" component={CreateAdminPage} />
+                        <Route path="/admin/createTeacher" component={CreateTeacherPage} />
                         <Route path="/admin/createSubject" component={CreateSubjectPage} />
                         <Route path="/admin/enrollNew" component={EnrollNewStudentPage} />
+                        <Route path="/admin/enrollReturning" component={EnrollReturningStudentPage} />
                     </Switch>
                 </div>
             </div>

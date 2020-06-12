@@ -1,7 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 import "./enroll-newStudent.style.css"
-import F from "../../../assets/F.svg"
+
 
 export const EnrollNewStudentPage = () =>{
     let history = useHistory();
